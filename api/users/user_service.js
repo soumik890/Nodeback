@@ -78,7 +78,7 @@ module.exports = {
   // },
 
   AllFunction: (data, callback) => {
-    console.log(data.action);
+    console.log("Actio given is", data.action);
     if (data.action == "create") {
       console.log("create hit");
       db.query(
@@ -150,10 +150,9 @@ module.exports = {
           return callback(null, results);
         }
       );
+    } else {
+      let results = "provide valid action";
+      return callback(null, results);
     }
-
-    // else{
-    //   return()
-    // }
   },
 };
